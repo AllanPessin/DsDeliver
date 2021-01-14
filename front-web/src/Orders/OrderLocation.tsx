@@ -39,7 +39,7 @@ function OrderLocation({onChangeLocation}: Props) {
             lng: item.center[0]
             }
         });
-        });
+    });
     
         callback(places);
     };
@@ -71,7 +71,8 @@ function OrderLocation({onChangeLocation}: Props) {
             center={address.position} 
             zoom={13}
             key={address.position.lat}
-            scrollWheelZoom={false}>
+            scrollWheelZoom
+            >
                 <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
